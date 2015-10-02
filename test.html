@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<script src="grammarParser.js"></script>
+</head>
+
+<body>
+
+<textarea id="myText" rows=5 cols=80> top ::= {hello} {world}! How are you?
+hello ::= Hello | Howdy | Hey there
+world ::= world | people | globe | kids</textarea>
+
+<p>Click the button to display the value of the value attribute of the text field.</p>
+
+<button onclick="parseMyText()">Try it</button>
+
+<p id="demo"></p>
+
+
+
+</body>
+</html>
