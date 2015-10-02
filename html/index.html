@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="../scripts/grammarParser.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    
+    <title>Grammar Parser</title>
+</head>
+
+<body>
+        <nav class="navbar navbar-inverse navbar-static-top">
+      <a class="navbar-brand" href="#">grammarJS</a>
+      <ul class="nav nav-pills">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+    </nav>
+
+   <div class="jumbotron">
+      <div class="container">
+        <h1>Ever wanted to be an author?</h1>
+        <p>This website can help you be awesome! No, seriously! This page will help you generate a random story!</p>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+      </div>
+    </div>
+    
+    <div class="form-group">
+  <label for="myText">Write Your Story:</label>
+  <textarea class="form-control" rows="5" id="myText">top ::= {hello} {world}! How are you?
+hello ::= Hello | Howdy | Hey there
+world ::= world | people | globe | kids</textarea>
+ <p>Click the button to display the value of the value attribute of the text field.</p>
+
+<button onclick="parseMyText()" class=".navbar-btn">Try it</button>       
+        
+</div>
+
+
+<p id="demo"></p>
+
+
+
+</body>
+</html>
