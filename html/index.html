@@ -2,12 +2,17 @@
 <html>
 
 <head>
-    <script src="../scripts/grammarParser.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    
+
+
+   
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+
     <title>Grammar Parser</title>
 </head>
 
@@ -29,21 +34,30 @@
       </div>
     </div>
     
+    <div class="container" id="success_story">
+        <h2 id="success"></h2>
+        <p id="story"></p>
+    </div>
+    <div class="container">
     <div class="form-group">
-  <label for="myText">Write Your Story:</label>
+  <h2>Write Your Story:</h2>
   <textarea class="form-control" rows="5" id="myText">top ::= {hello} {world}! How are you?
 hello ::= Hello | Howdy | Hey there
 world ::= world | people | globe | kids</textarea>
  <p>Click the button to display the value of the value attribute of the text field.</p>
 
-<button onclick="parseMyText()" class=".navbar-btn">Try it</button>       
+<button id="tryit" class="btn btn-success">Try it</button> <button class="btn btn-danger" id="reset" style="display: none;">Reset</button>      
         
 </div>
-
+</div>
 
 <p id="demo"></p>
 
 
-
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="../scripts/grammarParser.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </body>
+    
+    
 </html>
