@@ -1,33 +1,24 @@
+<!DOCTYPE html>
 <html>
 
 <head>
-
-<script type="text/javascript">
-    window.onload = function () {
-        var btn = document.getElementById("btn");
-        if (btn.addEventListener) {
-            btn.addEventListener("click", btnClick, false);
-        } else if (btn.attachEvent) {
-            btn.attachEvent("onclick", btnClick);
-        }
-    };
-    function btnClick() {
-        alert(document.getElementById("percent").value);
-    }
-</script>
-<title> Rawr </title>
-
-
-
+<script src="grammarParser.js"></script>
+    <title>Grammar Parser</title>
 </head>
 
 <body>
-<h1>Hello, World!</h1>
+
+<textarea id="myText" rows=5 cols=80> top ::= {hello} {world}! How are you?
+hello ::= Hello | Howdy | Hey there
+world ::= world | people | globe | kids</textarea>
+
+<p>Click the button to display the value of the value attribute of the text field.</p>
+
+<button onclick="parseMyText()">Try it</button>
+
+<p id="demo"></p>
 
 
-<div id="content">
-<input type="text" id="percent" value="" />
-<button id="btn">click</button></div>
+
 </body>
-
 </html>
