@@ -1,0 +1,2 @@
+top ::= This is a <sentence>.
+sentence ::= sentence | fragment | word

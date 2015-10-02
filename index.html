@@ -1,0 +1,33 @@
+<html>
+
+<head>
+
+<script type="text/javascript">
+    window.onload = function () {
+        var btn = document.getElementById("btn");
+        if (btn.addEventListener) {
+            btn.addEventListener("click", btnClick, false);
+        } else if (btn.attachEvent) {
+            btn.attachEvent("onclick", btnClick);
+        }
+    };
+    function btnClick() {
+        alert(document.getElementById("percent").value);
+    }
+</script>
+<title> Rawr </title>
+
+
+
+</head>
+
+<body>
+<h1>Hello, World!</h1>
+
+
+<div id="content">
+<input type="text" id="percent" value="" />
+<button id="btn">click</button></div>
+</body>
+
+</html>
