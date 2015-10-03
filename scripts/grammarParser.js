@@ -60,30 +60,31 @@ function keyLookup(dictionary, topkey, storyString, second) {
 var $success = $('#success');
 var $story = $('#story');
 var $reset = $('#reset');
+var $inputDict = $("#inputDict");
 
 function badStory(){
-
-    $success.html("Oh no!");
+    //$success.html("Oh no!");
     $story.html("Sorry, your grammar was bad. Maybe try again?");
     
 }
 
 function goodStory(finalstring){
         //console.log($success);
-    //console.log("YAY " + finalstring);
-    $success.html("Yay!");
+    //$success.text("Yay!");
     $story.html(finalstring);
 
 }
 
 //
+
+
 function parseMyText() {
     //initial values
 	var finalstring="";
 	var finalobject={};
     
     //pull in myText, split by line breaks
-    var x = document.getElementById("myText").value.split('\n');
+    var x = document.getElementById("inputDict").value.split('\n');
     
     // for each command, build an object
     for(var i =0; i < x.length; i++){
@@ -107,7 +108,6 @@ function parseMyText() {
  			finalobject[keyValPairs[0]] = keyValPairs[1].split(" | ");
  		} else{
             //return error if necessary
-            console.log("oops");
  			badStory();
  		}	
     }
@@ -124,10 +124,32 @@ function parseMyText() {
 }
 
 function resetForm(){
-        $success.html("");
-        $story.html("");
+        //$success.html("");
+        //$story.html("");
+        $inputDict.html("");
         $reset.fadeOut();
 }
 
+function preloadRomance(){
+
+        $inputDict.html("top ::= {Fred} desperately {wanted} to impress {Carla}. He thought about {lassoing} the {moon} or {catching} a {shootingstar}, but those things had already been done. He needed something {new}, something {unique}. In the end he decided to simply be himself, and that idea was novel enough to win her heart forever. \nFred ::= Fred | Bill | Calvin \nwanted ::= wanted | needed | yearned \nCarla ::= Kristen | Kayla | Allison | Melanie \nlassoing ::= lassoing | strangling | tackling \nmoon ::= moon | stars | local councilwoman \ncatching ::= catching | chasing | fighting \nshootingstar ::= shooting star | monkey | kitten | comet \nnew ::= new | unique | strange \nunique ::= unique | terrible | awesome");
+
+}
+
+function preloadHello(){
+   $inputDict.html("top ::= {hello} {world}! How are you?\nhello ::= Hello | Howdy | Hey there\nworld ::= world | people | globe | kids");
+}
+
+function preloadScifi(){
+   $inputDict.html("top ::= The time {machine} {shimmered} and {disappeared}. She {looked} at the {emptyspace} it left and {thoughtof} the {man} she had just spoken to, gone to his {fate} in a destroyed world. As he now {kicked} inside her she knew what might become of him. She {hadbetter} {getstarted}. \nemptyspace ::= empty {space} | {space}\nspace ::= space | hole | corner\nmachine ::= machine | contraption\nman ::= man | being | alien\nfate ::= fate | destiny | punishment\nshimmered ::= shimmered | sparkled | wavered\ndisappeared ::= disappeared | was gone | vanished\nlooked ::= looked | glanced | stared | glared\nthoughtof ::= thought of | considered | pondered\nhadbetter ::= had better | should | needed to\ngetstarted ::= get started | begin | start\nkicked ::= kicked | spasmed | wiggled | wriggled");
+}
+
+function preloadHorror(){
+    $inputDict.html("top ::= {Jones} looked for God in organised {religions}, in a {bottle}, and at {fastfoodoutlets}. He {searched} high and low until, {desperate}, he finally found her where he thought she would never be. Now God has to look for a better place to hide, or take out a restraining order.\nJones ::= Jones | Mill | William | Abraham \nreligions ::= religions | cults | parties | festivals \nbottle ::= bottle | whiskey | jug | milk bottle | forest \nfastfoodoutlets ::= fast food outlets | restaurants | schools | hospitals \nsearched ::= searched | looked | sought \ndesperate ::= desperate | lonely | desolate");
+                    }
 $(document).on('click', "#reset", resetForm);
 $(document).on('click', '#tryit',parseMyText);
+$(document).on('click', "#romance", preloadRomance);
+$(document).on('click', "#helloworld",  preloadHello);
+$(document).on('click', "#scifi",  preloadScifi);
+$(document).on('click', "#horror",  preloadHorror);

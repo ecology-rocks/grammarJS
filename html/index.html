@@ -1,63 +1,54 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 
-
-   
-    <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-
-<!-- Latest compiled and minified JavaScript -->
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <style>
+    </style>
     <title>Grammar Parser</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
-        <nav class="navbar navbar-inverse navbar-static-top">
-      <a class="navbar-brand" href="#">grammarJS</a>
-      <ul class="nav nav-pills">
-        <li class="nav-item active">
-          <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-        </li>
-      </ul>
-    </nav>
-
+    <div class="container-fluid">
    <div class="jumbotron">
       <div class="container">
-        <h1>Ever wanted to be an author?</h1>
-        <p>This website can help you be awesome! No, seriously! This page will help you generate a random story!</p>
-        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+        <h1 id="success">Write Code For A Random Story!</h1>
+        <p id="story">The code is easy, and the possibilities are endless. Here's the idea:
+          </p>
       </div>
-    </div>
-    
-    <div class="container" id="success_story">
-        <h2 id="success"></h2>
-        <p id="story"></p>
     </div>
     <div class="container">
     <div class="form-group">
-  <h2>Write Your Story:</h2>
-  <textarea class="form-control" rows="5" id="myText">top ::= {hello} {world}! How are you?
-hello ::= Hello | Howdy | Hey there
-world ::= world | people | globe | kids</textarea>
- <p>Click the button to display the value of the value attribute of the text field.</p>
+        <h2>Load a preformatted story:</h2>
+        <div class="row">
+        <button class="btn btn-default" id="helloworld">Hello, World!</button>
+        <button class="btn btn-primary" id="romance">Romance</button>
+        <button class="btn btn-success" id="scifi">Sci-Fi</button>
+        <button class="btn btn-info" id="horror">Horror</button>
+            
+        </div>
+        <h2>Write your own story:</h2>
+        <p><ul>
+          <li><strong>Keys</strong> go on the left side of the "::=".</li>
+          <li><strong>Values</strong> go on the right side.</li>
+          <li>You can <strong>separate</strong> value choices or possibilities with the "|" symbol.</li>
+              <li>You can call <strong>another key</strong> by sticking it inside the brackets "{key_here}".</li></ul></p>
+  <textarea class="form-control" rows="5" id="inputDict"></textarea>
+        
 
 <button id="tryit" class="btn btn-success">Try it</button> <button class="btn btn-danger" id="reset" style="display: none;">Reset</button>      
         
 </div>
 </div>
-
-<p id="demo"></p>
-
+    </div>
 
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script src="../scripts/grammarParser.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-</body>
+    
+        </body>
     
     
 </html>
