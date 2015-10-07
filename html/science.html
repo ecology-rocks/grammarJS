@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <style>
+    </style>
+    <title>Grammar Parser</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div class="container-fluid">
+   <div class="jumbotron">
+      <div class="container">
+        <h1 id="success">Generate Your Manuscript!</h1>
+        <p id="story">The code is easy, and the possibilities are endless. Here's the idea:
+          </p>
+      </div>
+    </div>
+    <div class="container">
+    <div class="form-group">
+        <h2>Load a preformatted story:</h2>
+        <div class="row">
+        <button class="btn btn-default" id="pv-intro">PV Introduction</button>
+        <button class="btn btn-primary" id="gm-intro">GM Introduction</button>
+        <button class="btn btn-success" id="invasives-intro">Invasives Introducion</button>
+        <button class="btn btn-info" id="mistake-egg-intro">Mistake Egg Introduction</button>
+            
+        </div>
+        <h2>Write your own story:</h2>
+        <p><ul>
+          <li><strong>Keys</strong> go on the left side of the "::=".</li>
+          <li><strong>Values</strong> go on the right side.</li>
+          <li>You can <strong>separate</strong> value choices or possibilities with the "|" symbol.</li>
+              <li>You can call <strong>another key</strong> by sticking it inside the brackets "{key_here}".</li></ul></p>
+  <textarea class="form-control" rows="5" id="inputDict"></textarea>
+        
+
+<button id="tryit" class="btn btn-success">Try it</button> <button class="btn btn-danger" id="reset" style="display: none;">Reset</button>      
+        
+</div>
+</div>
+    </div>
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="../scripts/grammarParser.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    
+        </body>
+    
+    
+</html>

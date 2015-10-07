@@ -147,9 +147,17 @@ function preloadScifi(){
 function preloadHorror(){
     $inputDict.html("top ::= {Jones} looked for God in organised {religions}, in a {bottle}, and at {fastfoodoutlets}. He {searched} high and low until, {desperate}, he finally found her where he thought she would never be. Now God has to look for a better place to hide, or take out a restraining order.\nJones ::= Jones | Mill | William | Abraham \nreligions ::= religions | cults | parties | festivals \nbottle ::= bottle | whiskey | jug | milk bottle | forest \nfastfoodoutlets ::= fast food outlets | restaurants | schools | hospitals \nsearched ::= searched | looked | sought \ndesperate ::= desperate | lonely | desolate");
                     }
+function preloadPVIntro(){
+  $inputDict.html("top ::= {pvFirst} {pvDiscName}, {pvCommonName}, is {aRare}, univoltine butterfly {nativeto} {riparian} {areas} of {mature} forests in North America, {fromWItoVT}, and {southGAtoAL} (Finnell & Lehn 2007). | {aRareU} butterfly, {pvFirst} {pvDiscName} {inhabits} {riparian} {areas} of {mature} forests in eastern North America, {fromWItoVT} and {southGAtoAL}. | As {aRare} butterfly, {pvFirst} {pvDiscName} {inhabits} {mature} forests in eastern North America, often in {riparian} {areas}. Also known as {pvCommonName}, it occurs {fromWItoVT} and {southGAtoAL}.\npvFirst ::= *Pieris virginiensis*\npvDiscName ::= Edwards\npvCommonName ::= the West Virginia White butterfly\naRare ::= a rare | an uncommon\naRareU ::= A rare | An uncommon\nunivoltine ::= univoltine | single-generation\nmature ::= mature | old-growth | undisturbed | large\nfromWItoVT ::= from Wisconsin to Vermont | from as far west as Wisconsin to Vermont | from Wisconsin east to Vermont\nsouthGAtoAL ::= as far south as Georgia and Alabama | as far south as Alabama and Georgia | south to Georgia and Alabama | south to Alabama and Georgia\nnativeto ::= native to | that {inhabits} | {residing} in\ninhabits ::= inhabits | occupies | lives in | persists in\nresiding ::= residing | persisting | living\nriparian ::= riparian | wet | moist\nareas ::= areas | regions | sections");  
+}
 $(document).on('click', "#reset", resetForm);
 $(document).on('click', '#tryit',parseMyText);
 $(document).on('click', "#romance", preloadRomance);
 $(document).on('click', "#helloworld",  preloadHello);
 $(document).on('click', "#scifi",  preloadScifi);
 $(document).on('click', "#horror",  preloadHorror);
+
+$(document).on('click', "#pv-intro", preloadPVIntro);
+$(document).on('click', "#gm-intro",  preloadHello);
+$(document).on('click', "#invasives-intro",  preloadScifi);
+$(document).on('click', "#mistake-egg-intro",  preloadHorror);
